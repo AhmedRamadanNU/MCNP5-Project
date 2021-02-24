@@ -1,0 +1,271 @@
+          Thread Name & Version = mcnp5beta, 4.13
+                                    _                                  
+          ._ _    _  ._   ._   __  |_   __  |_    _   _|_   _.         
+          | | |  (_  | |  |_)       _)      |_)  (/_   |_  (_|         
+                          |                                            
+ +--------------------------------------------------------------------+
+ |   This program was prepared by the Regents of the University of    |
+ |California at Los Alamos National Laboratory (the University) under |
+ |  contract number W-7405-ENG-36 with the U.S. Department of Energy  |
+ |(DoE).  The University has certain rights in the program pursuant to|
+ |  the contract and the program should not be copied or distributed  |
+ | outside your organization.  All rights in the program are reserved |
+ |by the DoE and the University.  Neither the U.S. Government nor the |
+ | University makes any warranty, express or implied, or assumes any  |
+ |     liability or responsibility for the use of this software.      |
+ +--------------------------------------------------------------------+
+  
+1mcnp     version 5beta ld=08-xx-02                                       
+ *************************************************************************                 probid =                    
+  inp = NEW.TXT outp = nout runtpe = rnew                                        
+
+ 
+ warning. universe map (print table 128) disabled.
+    1-       water reflected                                                                 
+    2-       1   5 -7.9  1 -2 4 -3 6 -5 imp:n=1 $base                                        
+    3-       2   2 -2.7  -8 -7  imp:n=1 u=1  $ cone                                          
+    4-       3   1 -10.38  -12 -11 9 imp:n=1 u=1    $ fuel zone                              
+    5-       4   8  -2.7    -14 -11 13 12  imp:n=1 u=1 $ spring zone                         
+    6-       5   3   -.001293           -14  -13 12 imp:n=1 u=1     $ air in sprig zone      
+    7-       6   2  -2.7 7 -10 -15 #3 #4 #5 u=1 imp:n=1             $ end and upper blug ,cla
+    8-       7   5  -7.9   16 -17 18  imp:n=1 u=1 $bottom grid                               
+    9-       8   5  -7.9   19 -20 18  imp:n=1 u=1 $top grid                                  
+   10-       9   4   -1  (10:8) -21 #7 imp:n=1 u=1 $water                                    
+   11-       10  0       -22 23 -24 25 -41 42 -15 2 fill=4 imp:n=1                           
+   12-       12  4  -1  30 -21 -31 32 -33 34 #1 #10 #13 imp:n=1 $water boundary              
+   13-       13  5   -7.9  -35 36 -37 38 16 -17 #10 imp:n=1                                  
+   14-       14  5   -7.9  -35 36 -37 38 19  -20 #10 imp:n=1                                 
+   15-       15  12   -11.34   39 -40 imp:n=1                                                
+   16-       16  0             40  imp:n=0                                                   
+   17-       17  3   -.001293  -39 #12 #10 #13 #14 #1 imp:n=1                                
+   18-       18  3   -.001293  10 21 -15 #8 imp:n=1 u=1  $outer air zone in bin              
+   19-       19  4  -1  10 -21 #21 imp:n=1 u=3 $water                                        
+   20-       20  4   -1        -10 -21 u=3 imp:n=1 $cone                                     
+   21-       21  5  -7.9   16 -17 18  imp:n=1 u=3 $bottom grid                               
+   22-       22  5   5  -7.9   19 -20 18  imp:n=1 u=3 $top grid                              
+   23-       23  3  -.001293 -10 21 -15 u=3 imp:n=1 $air rigeon                              
+   24-       24  3  -.001293 10 21 -15 #22 u=3 imp:n=1 $ OUTER air                           
+   25-       25  0     -45 46 -47 50 -48 49 lat=2 u=4 imp:n=1                                
+   26-                   fill=-13:13 -13:13 0:0                                              
+   27-               1 1 1 1 1 1 1 1 1 1 1 1 1 3 3 3 3 3 1 1 1 1 3 3 3 3 3  $y=-13           
+   28-               1 1 1 1 1 1 1 1 1 1 1 1 3 3 1 1 1 1 1 1 1 1 1 1 1 3 3  $y=-12           
+   29-               1 1 1 1 1 1 1 1 1 1 1 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-11           
+   30-               1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-10           
+   31-               1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-9            
+   32-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=-8            
+   33-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=-7            
+   34-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=-6            
+   35-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=-5            
+   36-               1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-4            
+   37-               1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-3            
+   38-               1 1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3  $y=-2            
+   39-               1 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3  $y=-1            
+   40-               3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 3  $y=0             
+   41-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1  $y=1             
+   42-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1  $y=2             
+   43-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1  $y=3             
+   44-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1  $y=4             
+   45-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=5             
+   46-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=6             
+   47-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=7             
+   48-               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=8             
+   49-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1  $y=9             
+   50-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1  $y=10            
+   51-               3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1  $y=11            
+   52-               3 3 3 1 1 1 1 1 1 1 1 1 1 3 3 1 1 1 1 1 1 1 1 1 1 1 1  $y=12            
+   53-               3 3 3 3 3 1 1 1 1 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1  $y=13            
+   54-                                                                                       
+   55-       1  pz  -0.8       $ base                                                        
+   56-       2  pz  0.0                                                                      
+   57-       3  px  47.5                                                                     
+   58-       4  px  -47.5                                                                    
+   59-       5  py  47.5                                                                     
+   60-       6  py  -47.5                                                                    
+   61-       7  pz  0.8        $ cone                                                        
+   62-       8  kz  0.0  0.345 1                                                             
+   63-       9  pz  1.8        $below blug                                                   
+   64-       10 cz  0.47                                                                     
+   65-       11 cz  0.41       $ fuel zone                                                   
+   66-       12 pz  91.5                                                                     
+   67-       13 cz .3           $ spring zone                                                
+   68-       14 pz  98.75                                                                    
+   69-       15 pz   100                                                                     
+   70-       16 pz  1.5         $bottom grid                                                 
+   71-       17 pz  1.75                                                                     
+   72-       18 cz .5                                                                        
+   73-       19 pz 98.25       $top grid                                                     
+   74-       20 pz 98.5                                                                      
+   75-       21 pz 92.49      $critical water hieght+1.8                                     
+   76-       22 py 15.78331298 $ fuel array                                                  
+   77-       23 py -15.78331298                                                              
+   78-       24 p  1.732050808 1 0 31.56662596                                               
+   79-       25 p  1.732050808 1 0 -31.56662596                                              
+   80-       41 p  1.732050808 -1 0 31.56662596                                              
+   81-       42 p  1.732050808 -1 0 -31.56662596                                             
+   82-       30 pz   -20           $water boundary                                           
+   83-       31 px   60                                                                      
+   84-       32 px   -60                                                                     
+   85-       33 py   60                                                                      
+   86-       34 py   -60                                                                     
+   87-       35 px   30                                                                      
+   88-       36 px   -30                                                                     
+   89-       37 py   30                                                                      
+   90-       38 py   -30                                                                     
+   91-       39 so    200                                                                    
+   92-       40 so    202                                                                    
+   93-       45 px 0.675                                                                     
+   94-       46 px -0.675                                                                    
+   95-       47 p  1 1.732050808 0 1.35                                                      
+   96-       48 p -1 1.732050808 0 1.35                                                      
+   97-       49 p -1 1.732050808 0 -1.35                                                     
+   98-       50 p  1 1.732050808 0 -1.35                                                     
+   99-                                                                                       
+  100-       kcode  3500 1.0  100  1100                                                      
+  101-       ksrc   0 0 44.85                                                                
+  102-       m1   92234.     7.1087e-6   $ (uo2) & Density  10.38 (g/cm3)                    
+  103-            92235.     1.1104e-3                                                       
+  104-            92236.     3.1792e-5                                                       
+  105-            92238.     2.2006e-2                                                       
+  106-            8016.      4.6311e-2                                                       
+  107-            13027.     4.1701e-6                                                       
+  108-            26000.     9.5140e-6                                                       
+  109-            14000.     2.2479e-5                                                       
+  110-            5010.      6.9037e-8                                                       
+  111-            5011.      2.7788e-7                                                       
+  112-       m2   13027.     5.9569e-2  $ (cladding, end plugs)  & Density  2.7 (g/cm3)      
+  113-            12000.     3.1442e-4                                                       
+  114-            14000.     2.4894e-4                                                       
+  115-            30000.     7.4597e-6                                                       
+  116-            26000.     6.4052e-5                                                       
+  117-       m3   7014.      4.1985e-5 $ (air)  & Density  (g/cm3)                           
+  118-            8016.      1.1263e-5                                                       
+  119-       m4   8016.       3.3353e-2 $ (water) & Density   (g/cm3)                        
+  120-            1001.      6.6706e-2                                                       
+  121-       mt4  lwtr.01t                                                                   
+  122-       m5   6000.      5.9414e-5 $ Stainless steel (basket, grid ,experimental tank and
+  123-            24000.     1.6469e-2                                                       
+  124-            26000.     6.0014e-2                                                       
+  125-            25055.     8.6597e-4                                                       
+  126-            28000.     8.1061e-3                                                       
+  127-            14000.     8.4696e-4                                                       
+  128-            16000.     2.2256e-5                                                       
+  129-            15031.     3.0719e-5                                                       
+  130-       m8   13027.     6.2239e-3 $(Spring zone)  & Density   (g/cm3)                   
+  131-            12000.     3.2852e-5                                                       
+  132-            30000.     7.7940e-7                                                       
+  133-            26000.     6.6923e-6                                                       
+  134-            14000.     2.6010e-5                                                       
+  135-       m12  82207.     -11.34                                                          
+ 
+ comment. surface     15   appears more than once in a chain.
+
+ surface     15   is in cells     6 and    10 in chain
+     6  <   25  <   10
+ 
+ comment. total fission nubar data are being used.
+ 
+ warning.   5 materials had unnormalized fractions. print table 40.
+ 
+ warning.   1 of the materials appear at more than one density.
+ 
+ warning.   1 cell densities are greater than 40 gram/cc.
+1cells                                                                                                  print table 60
+
+                      atom        gram                                     neutron                                     
+        cell  mat    density     density     volume       mass     pieces importance                                   
+
+     1     1    5  8.64141E-02 7.90000E+00 7.22000E+03 5.70380E+04     0  1.0000E+00                                   
+     2     2    2  6.02035E-02 2.70000E+00 1.84977E-01 4.99438E-01     1  1.0000E+00                                   
+     3     3    1  6.95045E-02 1.03800E+01 4.73707E+01 4.91708E+02     1  1.0000E+00                                   
+     4     4    8  6.02035E-02 2.70000E+00 1.77885E+00 4.80289E+00     1  1.0000E+00                                   
+     5     5    3  5.39815E-05 1.29300E-03 2.04989E+00 2.65051E-03     1  1.0000E+00                                   
+     6     6    2  6.02035E-02 2.70000E+00 1.76431E+01 4.76365E+01     1  1.0000E+00                                   
+     7     7    5  8.64141E-02 7.90000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+     8     8    5  8.64141E-02 7.90000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+     9     9    4s 1.00309E-01 1.00000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    10    10    0  0.00000E+00 0.00000E+00 8.62953E+04 0.00000E+00     0  1.0000E+00                                   
+    11    12    4s 1.00309E-01 1.00000E+00 1.53214E+06 1.53214E+06     0  1.0000E+00                                   
+    12    13    5  8.64141E-02 7.90000E+00 6.84262E+02 5.40567E+03     0  1.0000E+00                                   
+    13    14    5  8.64141E-02 7.90000E+00 6.84262E+02 5.40567E+03     0  1.0000E+00                                   
+    14    15   12  3.29942E-02 1.13400E+01 1.01540E+06 1.15146E+07     1  1.0000E+00                                   
+    15    16    0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00     0  0.0000E+00                                   
+    16    17    3  5.39815E-05 1.29300E-03 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    17    18    3  5.39815E-05 1.29300E-03 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    18    19    4s 1.00309E-01 1.00000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    19    20    4s 1.00309E-01 1.00000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    20    21    5  8.64141E-02 7.90000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    21    22    5  5.00000E+00 4.57101E+02 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    22    23    3  5.39815E-05 1.29300E-03 5.21177E+00 6.73882E-03     1  1.0000E+00                                   
+    23    24    3  5.39815E-05 1.29300E-03 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+    24    25    0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00     0  1.0000E+00                                   
+
+ total                                     2.64249E+06 1.31151E+07
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         4 warning messages so far.
+1cross-section tables                                                                                   print table 100
+
+     table    length
+
+                        tables from file actia                                                           
+
+   1001.62c    5202  1-h-1 at 293.6K from endf-vi.8 njoy99.50                                     mat 125      12/05/01
+   7014.62c   67462  7-n-14 at 293.6K from endf-vi.8 njoy99.50                                    mat 725      12/05/01
+   8016.62c  170541  8-o-16 at 293.6K from endf-vi.8 njoy99.50                                    mat 825      12/05/01
+  12000.62c   44838  12-mg-0 at 293.6K from endf/b-vi.8 njoy99.50                                 mat1200      12/06/01
+  13027.62c   75363  13-al-27 at 293.6K from endf-vi.8 njoy99.50                                  mat1325      12/17/01
+  16000.62c   68665  16-s-0 at 293.6K from endf/b-vi.8 njoy99.50                                  mat1600      12/06/01
+  25055.62c  134565  25-mn-55 at 293.6K from endf/b-vi.8 njoy99.50                                mat2525      02/11/02
+
+                        tables from file endf66a                                                         
+
+   5010.66c   30720  5-b-10 at 293.6K from endf-vi.1 njoy99.50                                    mat 525      07/13/01
+   5011.66c   71944  5-b-11 at 293.6K from endf-vi.0 (MOD) njoy99.50                              mat 528      07/18/01
+   6000.66c   44688  6-c-0 at 293.6K from endf-vi.6 njoy99.50                                     mat 600      07/13/01
+  15031.66c   24697  15-p-31 at 293.6K from endf-vi.6 njoy99.50                                   mat1525      07/24/01
+
+                        tables from file endf60                                                          
+
+  14000.60c   51392  14-si-nat from endf/b-vi                                                     mat1400      11/25/93
+
+                        tables from file rmccs                                                           
+
+  24000.50c   89104  njoy                                                                       (  1324)      79/06/21.
+  26000.55c   84136  njoy                                                                       ( 260)       10/21/82  
+  28000.50c   82267  njoy                                                                       (  1328)      79/06/21.
+
+                        tables from file endl92                                                          
+
+  30000.42c  152923   ENDL library name:  nd920609  LANL/XTM modified:  951222                               911219    
+                     temperature = 2.5860E-08 adjusted to 2.5300E-08
+
+                        tables from file endf66c                                                         
+
+  82207.66c  134389  82-pb-207 at 293.6K from endf-vi.6 njoy99.50                                 mat8234      08/13/01
+  92234.66c  173430  92-u-234 at 293.6K from endf-vi.0 njoy99.50        total nu                  mat9225      08/13/01
+                     probability tables used from 1.5000E-03 to 1.0000E-01 mev.
+  92235.66c  583724  92-u-235 at 293.6K from endf-vi.5 njoy99.50        total nu                  mat9228      08/14/01
+                     probability tables used from 2.2500E-03 to 2.5000E-02 mev.
+  92236.66c  178650  92-u-236 at 293.6K from endf-vi.0 njoy99.50        total nu                  mat9231      09/05/01
+                     probability tables used from 1.5000E-03 to 1.0000E-01 mev.
+  92238.66c  669744  92-u-238 at 293.6K from endf-vi.5 njoy99.50        total nu                  mat9237      08/14/01
+                     probability tables used from 1.0000E-02 to 1.4903E-01 mev.
+
+                        tables from file tmccs                                                           
+
+   lwtr.01t   10193  hydrogen in light water at 300 degrees kelvin                           1001     0     010/22/85  
+
+  total     2948637
+ 
+ warning. neutron energy cutoff is below some cross-section tables.
+ 
+ comment.    1 cross sections modified by free gas thermal treatment.

@@ -1,0 +1,35 @@
+ mcnp     ver=5beta, ld=08-xx-02                                      
+          Thread Name & Version = mcnp5beta, 4.13
+          Copyright LANL/UC/DOE - see output file
+                                    _                                  
+          ._ _    _  ._   ._   __  |_   __  |_    _   _|_   _.         
+          | | |  (_  | |  |_)       _)      |_)  (/_   |_  (_|         
+                          |                                            
+  
+ 
+ comment. photon   importances have been set equal to 1.
+ comment. surface     15   appears more than once in a chain.
+ comment. using random number generator  1, initial seed = 19073486328125      
+ imcn   is done
+
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ warning. plot plane coincident with surface      2
+ additional error messages on file outp    
